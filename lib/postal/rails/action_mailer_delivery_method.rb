@@ -16,7 +16,7 @@ module Postal
           [message.to, message.cc, message.bcc].flatten.compact.uniq.each do |address|
             m.rcpt_to(address)
           end
-          m.data(message.to_s)
+          m.data(message)
         end
       end
 
